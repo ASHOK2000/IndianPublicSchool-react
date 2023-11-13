@@ -1,6 +1,7 @@
 import React from "react";
 import Footer from "./Footer";
 import NavBar from "./NavBar";
+import { Container } from 'react-bootstrap';
 
 export default function WhyUs() {
   return (

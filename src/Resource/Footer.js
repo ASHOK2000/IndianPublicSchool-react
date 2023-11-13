@@ -7,9 +7,8 @@ import {
   MDBRow,
   MDBBtn,
 } from "mdb-react-ui-kit";
-import { EnvelopeAtFill, Telephone } from "react-bootstrap-icons";
 import Image from "react-bootstrap/Image";
-import logoImage from "../res_images/ips_logo.png";
+import logoImage from "../res_images/Ruralengineer.png";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
@@ -22,7 +21,6 @@ export default function Footer() {
           <div className="me-5 d-none d-lg-block">
             <span>Get connected with us on social networks:</span>
           </div>
-
           <div>
             <MDBBtn
               floating
@@ -111,12 +109,11 @@ export default function Footer() {
                   <MDBIcon icon="gem" className="me-3" />
                   <Image
                     src={logoImage}
-                    alt="indian Public school"
-                    className=""
+                    alt="Rural Engineer Blogs"
+                    className="mb-5"
                     style={{ height: "80px" }}
                   />
-                  <br /> Vill. Suhili Ramnagar District: Satna Madhya-Pradesh
-                  INDIA
+               
                 </p>
               </MDBCol>
 
@@ -125,38 +122,41 @@ export default function Footer() {
               <MDBCol md="3" lg="2" xl="2" className="mx-auto mb-4">
                 <h6 className="text-uppercase fw-bold mb-4">Useful links</h6>
                 <p>
+                  <Link to="/Contact_us" className="text-reset">
+                    Help
+                  </Link>
+                </p>
+                <p>
                   <Link to="/Pricing" className="text-reset">
                     Pricing
                   </Link>
                 </p>
                 <p>
                   <Link to="/Admisson" className="text-reset">
-                    Admissons
-                  </Link>
-                </p>
-                <p>
-                  <Link to="/Contact_us" className="text-reset">
-                    Help
+                    Admisson
                   </Link>
                 </p>
               </MDBCol>
 
               <MDBCol md="4" lg="3" xl="3" className="mx-auto mb-md-0 mb-4">
-                <h6 className="text-uppercase fw-bold mb-4">Contact</h6>
+                <h6 className="text-uppercase fw-bold mb-4">Resources</h6>
 
                 <p>
-                  <EnvelopeAtFill /> &nbsp;
-                  <a href="mailto:Info@IndianPublicSchool.com">
-                    Info@IndianPublicSchool.com
-                  </a>
+                  <Link to="/" className="text-reset">
+                    Blogs
+                  </Link>
                 </p>
+
                 <p>
-                  <Telephone /> &nbsp;
-                  <a href="tel:6265173931">+91 6265173931</a>
+                  <Link to="/" className="text-reset">
+                    Course info
+                  </Link>
                 </p>
+
                 <p>
-                  <Telephone /> &nbsp;
-                  <a href="tel:9685843843">+91 6265173931</a>
+                  <Link to="/" className="text-reset">
+                    Interview Questions
+                  </Link>
                 </p>
               </MDBCol>
             </MDBRow>
@@ -166,16 +166,16 @@ export default function Footer() {
           className="text-left"
           style={{ backgroundColor: "rgba(117, 17, 17, 0.05)" }}>
           <div className="text-center p-2">
-            © 2023 Copyright:
+            © 2023 Copyright: &nbsp;
             <a
               className="text-reset fw-bold"
-              href="https://IndianPublicSchool.com/">
-              IndianPublicSchool
-            </a>
+              href="https://ruralEngeer.com/">
+              ruralEngineer.com</a>
+              
           </div>
-          <Link to="/Devloper" style={{ textDecoration: "none" }}>
+          <Link to="/Developer" style={{ textDecoration: "none" }}>
             {" "}
-            Design and devloped By Ashok Kushwaha{" "}
+            Design and developed By Ashok Kushwaha{" "}
           </Link>
         </div>
       </MDBFooter>

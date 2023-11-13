@@ -3,26 +3,14 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Image from "react-bootstrap/Image";
 import { LinkContainer } from "react-router-bootstrap";
-import logoImage from "../res_images/ips_logo.png";
-import Button from "react-bootstrap/Button";
-import NavDropdown from "react-bootstrap/NavDropdown";
-import Form from "react-bootstrap/Form";
-
+import logoImage from "../res_images/Ruralengineer.png";
+import { Container } from "react-bootstrap";
 import "../css/navbar.css";
 
 export default function NavBar() {
-  // const centerStyle = {
-  //   color: "rgb(96, 2, 133)",
-  //   fontFamily: "gothamhtf-medium ",
-  //   display: "flex",
-  //   justifyContent: "center",
-  //   alignItems: "center",
-  // };
-
- 
   return (
-    <>
-      <div>
+    <Container className="header-bg">
+      <div className="NavBody">
         <Navbar bg="" expand="lg">
           <Navbar.Brand href="/">
             <div className="navbar_logo">
@@ -34,74 +22,64 @@ export default function NavBar() {
             </div>
           </Navbar.Brand>
 
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav" className="nav_link">
-            <Nav className="ml-auto ">
+          <Navbar.Toggle aria-controls="basic-navbar-nav " />
+          <Navbar.Collapse id="basic-navbar-nav" className="nav_link ">
+            <Nav className="ml-auto  list-item">
               <LinkContainer to="/">
-                <Nav.Link>HOME</Nav.Link>
+                <Nav.Link>
+                  <p className="nav-title  NavStyle Nav-name">All&nbsp;BLOGS</p>
+                </Nav.Link>
               </LinkContainer>
 
-              <LinkContainer to="/About">
-                {/* <Nav.Link>About</Nav.Link> */}
-                <NavDropdown title="ABOUT" id="collasible-nav-dropdown">
-                  <NavDropdown.Item href="/aboutIndianPublicSchool">
-                    About Indian Public School
-                  </NavDropdown.Item>
-
-                  <NavDropdown.Item href="/ChairmanMsg">
-                    ChairMan's Massage
-                  </NavDropdown.Item>
-
-                  <NavDropdown.Item href="/transportPolicy">
-                    Transport Policy
-                  </NavDropdown.Item>
-                  <NavDropdown.Divider />
-
-                  <NavDropdown.Item href="/blogs">Blogs</NavDropdown.Item>
-                </NavDropdown>
+              <LinkContainer to="/Integration">
+                <Nav.Link>
+                  <p className="nav-title NavStyle Nav-name ">PROGRAMMING</p>
+                </Nav.Link>
               </LinkContainer>
 
-              <LinkContainer to="/whyIPS">
-                <Nav.Link>WHY US </Nav.Link>
+              <LinkContainer to="/Integration">
+                <Nav.Link>
+                  <p className="nav-title NavStyle Nav-name ">INTEGRATION</p>
+                </Nav.Link>
               </LinkContainer>
 
-              <LinkContainer to="/Alumni">
-                <Nav.Link>ALUMNI</Nav.Link>
+              <LinkContainer to="/Integration">
+                <Nav.Link>
+                  <p className="nav-title NavStyle Nav-name ">DEVOPS</p>
+                </Nav.Link>
               </LinkContainer>
 
-              <LinkContainer to="/Admisson">
-                <Nav.Link>ADMISSON</Nav.Link>
+              <LinkContainer to="/Integration">
+                <Nav.Link>
+                  <p className="nav-title NavStyle Nav-name ">
+                    INFORMATION TECHNOLOGY
+                  </p>
+                </Nav.Link>
               </LinkContainer>
 
-              <LinkContainer to="/careers">
-                <Nav.Link>CAREERS</Nav.Link>
+              <LinkContainer to="/Integration">
+                <Nav.Link>
+                  <p className="nav-title  NavStyle Nav-name">LEARNING</p>
+                </Nav.Link>
               </LinkContainer>
 
-              <LinkContainer to="/Contact_us">
-                <Nav.Link>CONTACT US</Nav.Link>
+              <LinkContainer to="/Integration">
+                <Nav.Link>
+                  <p className="nav-title  NavStyle Nav-name">
+                    &nbsp;S E O&nbsp;
+                  </p>
+                </Nav.Link>
               </LinkContainer>
 
-              <LinkContainer to="/location">
-                <Nav.Link>LOCATION</Nav.Link>
+              <LinkContainer to="/Integration">
+                <Nav.Link>
+                  <p className="nav-title  NavStyle Nav-name">OTHERS</p>
+                </Nav.Link>
               </LinkContainer>
-
-              <LinkContainer to="/Login">
-                <Nav.Link>LOGIN</Nav.Link>
-              </LinkContainer>
-
-              <Form className="d-flex">
-                <Form.Control
-                  type="search"
-                  placeholder="Search"
-                  className="me-2"
-                  aria-label="Search"
-                />
-                <Button variant="outline-success">Search</Button>
-              </Form>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
       </div>
-    </>
+    </Container>
   );
 }

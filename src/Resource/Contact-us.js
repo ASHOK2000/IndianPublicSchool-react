@@ -7,14 +7,14 @@ import { Container } from "react-bootstrap";
 export default function Contact() {
   return (
     <>
-      <div className="Header">
+      {/* <div className="Header">
         <NavBar />
-      </div>
+      </div> */}
       <Container>
         <div className="container mt-5 mb-2">
           <div className="contact__wrapper shadow-lg mt-n9">
             <div className="row no-gutters">
-              <div className="col-lg-5 contact-info__wrapper  p-5 order-lg-2">
+              {/* <div className="col-lg-5 contact-info__wrapper  p-5 order-lg-2">
                 <h3 className=" mb-5">Get in Touch</h3>
                 <ul className="contact-info__list list-style--none position-relative z-index-101">
                   <li className="mb-4 pl-4">
@@ -48,30 +48,30 @@ export default function Contact() {
                     </div>
                   </li>
                 </ul>
-              </div>
+              </div> */}
 
-              <div className="col-lg-7 contact-form__wrapper p-5 order-lg-1">
+              <div className="col-lg-12 contact-form__wrapper p-5 order-lg-1">
                 <form
                   action="#"
                   className="contact-form form-validate"
                   noValidate>
                   <div className="row">
-                    <div className="col-sm-6 mb-3">
+                    <div className="col-sm-5 mb-0 ml-5">
                       <div className="form-group">
-                        <label className="required-field" htmlFor="firstName">
-                          First Name
+                        <label className="required-field" htmlFor="Name">
+                          Name
                         </label>
                         <input
                           type="text"
                           className="form-control"
                           id="firstName"
                           name="firstName"
-                          placeholder="Your first name"
+                          placeholder="Your name"
                         />
                       </div>
                     </div>
 
-                    <div className="col-sm-6 mb-3">
+                    {/* <div className="col-sm-6 mb-3">
                       <div className="form-group">
                         <label htmlFor="lastName">Last Name</label>
                         <input
@@ -82,7 +82,7 @@ export default function Contact() {
                           placeholder="Your last name"
                         />
                       </div>
-                    </div>
+                    </div> */}
 
                     <div className="col-sm-6 mb-3">
                       <div className="form-group">
@@ -99,7 +99,7 @@ export default function Contact() {
                       </div>
                     </div>
 
-                    <div className="col-sm-6 mb-3">
+                    {/* <div className="col-sm-6 mb-3">
                       <div className="form-group">
                         <label htmlFor="phone">Phone Number</label>
                         <input
@@ -110,7 +110,7 @@ export default function Contact() {
                           placeholder="9898989898"
                         />
                       </div>
-                    </div>
+                    </div> */}
 
                     <div className="col-sm-12 mb-3">
                       <div className="form-group">
@@ -121,7 +121,7 @@ export default function Contact() {
                           className="form-control"
                           id="message"
                           name="message"
-                          rows="4"
+                          rows="2"
                           placeholder="Hi there, I would like to....."></textarea>
                       </div>
                     </div>
@@ -142,9 +142,9 @@ export default function Contact() {
         </div>
       </Container>
 
-      <div className="Footer mt-5">
+      {/* <div className="Footer mt-5">
         <Footer />
-      </div>
+      </div> */}
     </>
   );
 }
