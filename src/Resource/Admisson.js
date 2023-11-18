@@ -3,17 +3,17 @@ import Footer from "./Footer";
 import NavBar from "./NavBar";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import textcss from "../css/admisson.css";
+import "../css/admisson.css";
 import AdmissonForm from "./sub-pages/admissonForm";
 import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Collapse from "react-bootstrap/Collapse";
 import { Container } from "react-bootstrap";
+import { LampFill } from "react-bootstrap-icons";
 
 function Admisson() {
   const [open, setOpen] = useState(false);
-  const [open1, setOpen1] = useState(false);
 
   const paragraphText = `
   <ol>
@@ -54,6 +54,29 @@ function Admisson() {
     </li>
   </ol>`;
 
+  const numberStyle = {
+    fontWeight: "300",
+    fontFamily: "Urbanist, sans-serif",
+    textShadow:
+      " 2px 0 #832996, -2px 0 #832996, 0 2px #832996, 0 -2px #832996, 1px 1px #832996, -1px -1px #832996, 1px -1px #832996, -1px 1px #832996",
+  };
+  const ButtonStyle = {
+    background: "transparent", // Make the background transparent
+    border: "2px solid #FF5733", // Add a colorful border (in this case, orange)
+    color: "#FF5733", // Set the text color to match the border
+    borderRadius: "5px", // Add some border radius for rounded corners
+    padding: "10px 20px", // Adjust padding for better appearance
+  };
+  // const buttonBoxStyle = {
+  //   // background:
+  //   //   "transparent linear-gradient( 276deg, rgba(131, 41, 150, 0.1098039216) 0%, rgba(220, 118, 3, 0.1294117647) 100% ) 0% 0% no-repeat padding-box",
+  //   // backdropFilter: "blur(43px)",
+  //   justifyContent: "center", // Center horizontally
+  //   alignItems: "center", // Center vertically
+  //   height: "70vh", // 50% of the viewport height
+  //   position: "relative",
+  //   display: "flex",
+  // };
   return (
     <>
       <div className="Header">
@@ -61,68 +84,69 @@ function Admisson() {
       </div>
       <Container>
         <Row>
-          <Col className={textcss.AdmissonFormhead}>
-            <div>ONLINE APPLICATION FORM - ACADEMIC YEAR 2023-24</div>
+          <Col >
+            <div className="AdmissonFormhead">ONLINE APPLICATION FORM - ACADEMIC YEAR 2023-24</div>
 
-            <div className="Admisson-Form">
-              For the Online Application form, please fill all nessesry fields
+            <li style={{ listStyle: "none", marginTop: "12px" }}>
+              * For the Online Application form, please fill all nessesry fields
               and submit a Hard Copy of Document in School .
-            </div>
+            </li>
+
           </Col>
         </Row>
 
-        <AdmissonForm />
+        <div className="">
+          <AdmissonForm />
+        </div>
 
         <div>HERE ARE THE MUST-KNOWS FOR A SMOOTH ADMISSION PROCESS.</div>
 
-        {/* Online Application Form */}
-        <Row>
-          <Button
-            onClick={() => setOpen(!open)}
-            aria-controls="example-collapse-text"
-            aria-expanded={open}
-            // style={{ maxWidth: "1200" }}
-            size="lg">
-            Online process
-          </Button>
+        <div style={{}}>
+          {/* Online Application Form */}
+          <div style={{ position: "absolute" }}>
+            <ul style={{ listStyle: "none" }}>
+              <li>
+                <Row>
+                  <Button
+                    onClick={() => setOpen(!open)}
+                    aria-controls="example-collapse-text"
+                    aria-expanded={open}
+                    style={{}}
+                    size="lg">
+                    Online process
+                  </Button>
+                </Row>
+              </li>
+              <li className=" mt-5">
+                <Row>
+                  <Button
+                    onClick={() => setOpen(open)}
+                    aria-controls="Offline-collapse-text"
+                    aria-expanded={open}
+                    // style={ButtonStyle}
+                    size="lg">
+                    {" "}
+                    Offline process{" "}
+                  </Button>
+                </Row>
+              </li>
+            </ul>
+          </div>
 
-          <Col>
-            <div style={{ minHeight: "20px" }}>
-              <Collapse in={open} dimension="width">
-                <div id="example-collapse-text">
-                  <Card body style={{ maxWidth: "device-width" }}>
-                    <p dangerouslySetInnerHTML={{ __html: paragraphText }} />
-                  </Card>
-                </div>
-              </Collapse>
-            </div>
-          </Col>
-        </Row>
+          {/* offline process */}
+        </div>
 
-        {/* offline process */}
-
-        <Row>
-          <Button
-            onClick={() => setOpen1(!open1)}
-            aria-controls="Offline-collapse-text"
-            aria-expanded={open1}
-            // style={{ maxWidth: "1200" }}
-            size="lg">
-            Offline process{" "}
-          </Button>
-
-          <Col>
-            <div style={{ minHeight: "20px" }}>
-              <Collapse in={open1} dimension="width">
-                <div id="Offline-collapse-text">
-                  <Card body style={{ maxWidth: "device-width" }}>
-                    <p dangerouslySetInnerHTML={{ __html: paragraphText }} />
-                  </Card>
-                </div>
-              </Collapse>
-            </div>
-          </Col>
-        </Row>
+        <Col>
+          <div style={{ minHeight: "20px" }}>
+            <Collapse in={open} dimension="width">
+              <div id="Offline-collapse-text">
+                <Card body style={{ maxWidth: "device-width" }}>
+                  <p dangerouslySetInnerHTML={{ __html: paragraphText }} />
+                </Card>
+              </div>
+            </Collapse>
+          </div>
+        </Col>
       </Container>
       <div className="Footer">
         <Footer />

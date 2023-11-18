@@ -8,7 +8,40 @@
     /* Maintain aspect ratio */
 }
 
+.navImage {
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #ffffff;
+    height: 80px;
+    width: 80px;
+
+}
+
 .nav_link {
     float: right;
 }
 
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    background: #d9dfe0;
+}
+
+.navStyle {
+    background: rgb(172, 254, 255);
+    background: linear-gradient(0deg, rgba(172, 254, 255, 1) 0%, rgba(205, 143, 253, 1) 100%);
+    margin-bottom: 2%;
+
+}
+
+
+
+
+.navLinkText:hover {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 14px;
+    word-spacing: 0px;
+    color: #6f16e3;
+    font-weight: 200;
+    text-decoration: none;
+    font-weight: 800;
+}

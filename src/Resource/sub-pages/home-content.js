@@ -4,7 +4,6 @@ import Col from "react-bootstrap/Col";
 import homeImage from "../../res_images/homeImage.jpg";
 import Image from "react-bootstrap/Image";
 import Card from "react-bootstrap/Card";
-import AdmissonForm from "./admissonForm";
 import About from "./about";
 import "../../css/about.css";
 import Cardimage from "../../res_images/ips_logo.png";
@@ -15,6 +14,10 @@ import formImage from "../../res_images/backToSchool.png";
 //all components of home page from carausal to grid
 
 function HomeContent() {
+  const storedData = localStorage.getItem("userData");
+  const user = JSON.parse(storedData);
+  console.log(storedData, "stored");
+  console.log("Stored home page :", user);
   return (
     <Container>
       <div>
@@ -24,13 +27,14 @@ function HomeContent() {
             src={homeImage}
             alt="indian Public school"
             className="navbar_logo"
-            style={{ width: 1400, height: 400 }}
+            style={{ width: 1400, height: 300 }}
           />
         </Row>
-        <div fluid>
+        <div fluid className="mt-5">
           <Row>
             <Col>
               <p style={{ backgroundColor: "purple" }}>
+                <h1> hello: {user?.email}</h1>
                 Paragraphs are the building blocks of papers. Many students
                 define paragraphs in terms of length: a paragraph is a group of
                 at least five sentences, a paragraph is half a page long, etc.
@@ -124,7 +128,7 @@ function HomeContent() {
           </div>
         </Col>
 
-        <Col>
+        {/* <Col>
           <AdmissonForm
             style={{
               display: "flex",
@@ -133,7 +137,7 @@ function HomeContent() {
               width: "100%",
             }}
           />
-        </Col>
+        </Col> */}
       </Row>
 
       {/* grid */}

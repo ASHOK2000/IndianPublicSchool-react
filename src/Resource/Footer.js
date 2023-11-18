@@ -130,8 +130,8 @@ export default function Footer() {
                   </Link>
                 </p>
                 <p>
-                  <Link to="/Admisson" className="text-reset">
-                    Admissons
+                  <Link to="/admisson" className="text-reset">
+                    Admisson
                   </Link>
                 </p>
                 <p>

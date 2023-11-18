@@ -9,7 +9,7 @@ import Home from "./Resource/Home";
 import Location from "./Resource/Location";
 import About from "./Resource/About";
 import Contact from "./Resource/Contact-us";
-
+import TermsCondition from "./Resource/sub-pages/TermsCondition";
 
 function App() {
   return (
@@ -19,15 +19,16 @@ function App() {
 
         </Route>
 
-        <Route path="/Admisson" element={<Admisson></Admisson>}> </Route>
-        <Route path="/Alumni" element={<Alumani></Alumani>}></Route>
-        <Route path="/Careers" element={<Career></Career>}> </Route>
-        <Route path="/Contact_us" element={<Contact></Contact>}> </Route>
+        <Route path="/admisson" element={<Admisson></Admisson>}> </Route>
+        <Route path="/alumni" element={<Alumani></Alumani>}></Route>
+        <Route path="/careers" element={<Career></Career>}> </Route>
+        <Route path="/contact-us" element={<Contact></Contact>}> </Route>
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/location" element={<Location></Location>}></Route>
         <Route path="/whyIPS" element={<WhyUs></WhyUs>}></Route>
-        <Route path="/Login" element={<Login></Login>}> </Route>
-        <Route path="/Pricing" element={<Login></Login>}> </Route>
+        <Route path="/login" element={<Login></Login>}> </Route>
+        <Route path="/pricing" element={<Login></Login>}> </Route>
+        <Route path="/terms-condition" element={<TermsCondition></TermsCondition>}> </Route>
 
       </Routes>
 
